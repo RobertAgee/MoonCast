@@ -16,3 +16,6 @@ librosa
 accelerate==0.26.0
 ninja
 cryptography
+flash-attn --no-build-isolation
+huggingface_hub
+gradio==5.22.0
