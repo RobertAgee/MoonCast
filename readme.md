@@ -16,7 +16,7 @@ Paper: [paper](https://arxiv.org/abs/2503.14345)
 We open-source this system to advance the field of human-like speech synthesis. Our goal is to create more natural and expressive synthetic voices that bridge the gap between machines and humans. We hope this project will inspire researchers and developers to explore new possibilities in voice technology. We warmly welcome contributions from anyone interested in this project. Whether through code, documentation, feedback, or sharing your insights, every input helps make this project better.
 
 
-## Environment Setup
+## Linux Environment Setup
 - Create conda environment.
 ``` sh
 conda create -n mooncast -y python=3.10
@@ -36,6 +36,27 @@ pip install flash-attn --no-build-isolation
 python download_pretrain.py
 ```
 
+## Windows Environnment Setup
+- Create conda environment.
+``` sh
+conda create -n mooncast -y python=3.10
+conda activate mooncast
+```
+
+- Install MoonCast repository and dependencies.
+``` sh
+git clone https://github.com/jzq2000/MoonCast
+cd MoonCast
+pip install -r requirements.txt
+pip install flash-attn==2.3.2 --no-build-isolation
+```
+
+- Download the pretrained weights.
+``` sh
+python download_pretrain.py
+```
+
+
 ## Example Usage
 
 ### Script Generation
@@ -45,13 +66,13 @@ For podcast script generation, we utilize specific LLM prompts defined in ``zh_l
 The audio prompts used in this project are sourced from publicly available podcast segments and are intended solely for demonstration purposes. Redistribution of these audio files, whether in their original form or as generated audio, is strictly prohibited. If you have any concerns or questions regarding the use of these audio files, please contact us at juzeqian@mail.ustc.edu.cn
 
 ```sh
-CUDA_VISIBLE_DEVICIES=0 python inference.py
+CUDA_VISIBLE_DEVICES=0 python inference.py
 ```
 
 2025/03/26 UPDATE: We add a Gradio-based user interface for audio generation. Deploy it locally using:
 
 ```sh
-CUDA_VISIBLE_DEVICIES=0 python app.py
+CUDA_VISIBLE_DEVICES=0 python app.py
 ```
 
 ## Disclaimer  
