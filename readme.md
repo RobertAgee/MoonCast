@@ -27,7 +27,8 @@ conda activate mooncast
 ``` sh
 git clone https://github.com/jzq2000/MoonCast
 cd MoonCast
-pip install -r requirements.txt 
+pip install -r requirements.txt
+pip install flash-attn --no-build-isolation
 ```
 
 - Download the pretrained weights.
