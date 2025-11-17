@@ -18,14 +18,16 @@ We open-source this system to advance the field of human-like speech synthesis. 
 
 ## Environment Setup
 - Create conda environment.
-
 ``` sh
 conda create -n mooncast -y python=3.10
 conda activate mooncast
+```
+
+- Install MoonCast repository and dependencies.
+``` sh
+git clone https://github.com/jzq2000/MoonCast
+cd MoonCast
 pip install -r requirements.txt 
-pip install flash-attn --no-build-isolation
-pip install huggingface_hub
-pip install gradio==5.22.0
 ```
 
 - Download the pretrained weights.
