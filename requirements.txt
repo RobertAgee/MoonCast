@@ -16,5 +16,6 @@ librosa
 accelerate==0.26.0
 ninja
 cryptography
+huggingface_hub
 hf_xet
 gradio==5.22.0
