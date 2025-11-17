@@ -19,3 +19,4 @@ cryptography
 huggingface_hub
 hf_xet
 gradio==5.22.0
+soxr
